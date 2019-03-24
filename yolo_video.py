@@ -36,7 +36,7 @@ if __name__ == '__main__':
 
     parser.add_argument(
         '--classes', type=str,
-        help='path to class definitions, default ' + YOLO.get_defaults("content/keras-yolo3/model_data/voc_classes.txt")
+        help='path to class definitions, default ' + YOLO.get_defaults("model_data/voc_classes.txt")
     )
 
     parser.add_argument(
