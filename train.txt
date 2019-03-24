@@ -1,4 +1,3 @@
-﻿Path,x_min,y_min,x_max,y_max,Classid
 Data_set/Left/00000_00000.ppm 6,5,21,25,34
 Data_set/Left/00000_00001.ppm 5,5,21,26,34
 Data_set/Left/00000_00002.ppm 5,5,22,26,34
