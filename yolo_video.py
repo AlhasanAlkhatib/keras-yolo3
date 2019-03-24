@@ -5,7 +5,7 @@ from PIL import Image
 
 def detect_img(yolo):
     while True:
-        img = input('Input image filename:')
+        img = input('testim.jpg')
         try:
             image = Image.open(img)
         except:
@@ -26,17 +26,17 @@ if __name__ == '__main__':
     '''
     parser.add_argument(
         '--model', type=str,
-        help='path to model weight file, default ' + YOLO.get_defaults("model_path")
+        help='path to model weight file, default ' + YOLO.get_defaults("logs/000/trained_weights_stage_1.h5")
     )
 
     parser.add_argument(
         '--anchors', type=str,
-        help='path to anchor definitions, default ' + YOLO.get_defaults("anchors_path")
+        help='path to anchor definitions, default ' + YOLO.get_defaults("model_data/yolo_anchors.txt")
     )
 
     parser.add_argument(
         '--classes', type=str,
-        help='path to class definitions, default ' + YOLO.get_defaults("classes_path")
+        help='path to class definitions, default ' + YOLO.get_defaults("content/keras-yolo3/model_data/voc_classes.txt")
     )
 
     parser.add_argument(
