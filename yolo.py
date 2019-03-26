@@ -23,7 +23,7 @@ class YOLO(object):
         #"model_path": 'model_data/yolo.h5',
           "model_path": 'trained_weights_final.h5',
         #"model_path": 'logs/000/trained_weights_stage_1.h5',
-        "anchors_path": 'model_data/yolo_anchors.txt',
+        "anchors_path": 'model_data/tiny_yolo_anchors.txt',
         "classes_path": 'model_data/voc_classes.txt',
         "score" : 0.3,
         "iou" : 0.45,
