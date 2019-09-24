@@ -20,11 +20,16 @@ from keras.utils import multi_gpu_model
 
 class YOLO(object):
     _defaults = {
-        #"model_path": 'model_data/yolo.h5',
-          "model_path": 'trained_weights_final.h5',
-        #"model_path": 'logs/000/trained_weights_stage_1.h5',
+        "model_path": 'log/001/ep051-loss6.876-val_loss6.605.h5',
+        #"model_path": 'log/001/trained_weights_final_1.h5',
+        #"model_path": 'log/Hasan_classes_icin/ep057-loss6.578-val_loss6.577.h5',
+        #"model_path": 'log/Hasan_classes_icin/trained_weights_final_1.h5',
+        #"model_path": 'yolov3_log/YOLO_V3_trained_weights_final.h5',
+        #"model_path": 'yolov3_log/ep121-loss3.107-val_loss3.062.h5',
+        #"anchors_path": 'model_data/yolo_anchors.txt',
         "anchors_path": 'model_data/tiny_yolo_anchors.txt',
         "classes_path": 'model_data/voc_classes.txt',
+        #"classes_path": 'model_data/Hasan_classes.txt',
         "score" : 0.3,
         "iou" : 0.45,
         "model_image_size" : (416, 416),
@@ -166,7 +171,7 @@ class YOLO(object):
 
         end = timer()
         print(end - start)
-        return image
+        return image,out_classes,out_scores
 
     def close_session(self):
         self.sess.close()
@@ -211,4 +216,3 @@ def detect_video(yolo, video_path, output_path=""):
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
     yolo.close_session()
-
